@@ -14,26 +14,36 @@
 <body>
     <!-- Глобальный хедер как на Xbox.com -->
     <header class="xbox-header">
+    <!-- Верхняя часть хедера с меню -->
+    <div class="header-top">
         <div class="header-container">
-                <a href="/" class="xbox-logo">
+            <a href="/" class="xbox-logo">
                 <span class="xbox-icon">X</span>BOX
             </a>
             <nav class="xbox-nav">
-                <button class="mobile-menu-btn" aria-label="Меню">☰</button>
                 <ul class="nav-list">
                     <li><a href="/games">Игры</a></li>
-                    <li><a href="/hardware">Консоли</a></li>
+                    <li><a href="/consoles">Консоли</a></li>
                     <li class="active"><a href="/accessories">Аксессуары</a></li>
-                    <li><a href="/gamepass">Game Pass</a></li>
-                    <li><a href="/community">Сообщество</a></li>
                 </ul>
             </nav>
             <div class="header-actions">
-                <button class="search-btn" aria-label="Поиск">🔍</button>
-                <a href="/cart" class="cart-btn" aria-label="Корзина">🛒</a>
+                <button class="search-btn">🔍</button>
+                <a href="/cart" class="cart-btn">🛒</a>
             </div>
         </div>
-    </header>
+    </div>
+
+    <!-- БОЛЬШОЙ БАННЕР -->
+    <div class="header-banner">
+        <div class="banner-content">
+            <h1>Новые контроллеры Xbox Series X|S</h1>
+            <p>Эргономичный дизайн и тактильная отдача</p>
+            <a href="#buy" class="xbox-btn primary">Купить сейчас</a>
+        </div>
+        <img src="bigdick.jpg" alt="Новые джойстики Xbox" loading="eager">
+    </div>
+</header>
 
     <!-- Hero-секция с параллакс эффектом -->
     <section class="xbox-hero">
