@@ -1,0 +1,442 @@
+/* Базовые стили как на Xbox.com */
+:root {
+    --xbox-green: #107C10;
+    --xbox-green-hover: #0E6E0E;
+    --xbox-dark: #000000;
+    --xbox-light: #F5F5F5;
+    --xbox-gray: #333333;
+    --xbox-blue: #0067B8;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--xbox-dark);
+    background-color: white;
+    line-height: 1.6;
+}
+
+/* Хедер */
+.xbox-header {
+    background-color: var(--xbox-dark);
+    color: white;
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.xbox-logo {
+    color: white;
+    font-size: 26px;
+    font-weight: 700;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.xbox-icon {
+    color: var(--xbox-green);
+    margin-right: 4px;
+    font-weight: 700;
+}
+
+.xbox-nav .nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.xbox-nav .nav-list li {
+    margin: 0 12px;
+}
+
+.xbox-nav .nav-list a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 4px;
+    position: relative;
+}
+
+.xbox-nav .nav-list a:hover {
+    color: var(--xbox-green);
+}
+
+.xbox-nav .nav-list li.active a {
+    color: var(--xbox-green);
+}
+
+.xbox-nav .nav-list li.active a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--xbox-green);
+}
+
+/* Hero секция */
+.xbox-hero {
+    position: relative;
+    height: 80vh;
+    min-height: 600px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    padding: 0 5%;
+    color: white;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.xbox-hero h1 {
+    font-size: 48px;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    margin-bottom: 32px;
+    opacity: 0.9;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 16px;
+}
+
+/* Кнопки в стиле Xbox */
+.xbox-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border-radius: 2px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.xbox-btn.primary {
+    background-color: var(--xbox-green);
+    color: white;
+    border: none;
+}
+
+.xbox-btn.primary:hover {
+    background-color: var(--xbox-green-hover);
+}
+
+.xbox-btn.secondary {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.xbox-btn.secondary:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+.xbox-btn.outline {
+    background-color: transparent;
+    color: var(--xbox-dark);
+    border: 2px solid var(--xbox-dark);
+    width: 100%;
+    padding: 10px;
+    margin-top: 12px;
+}
+
+.xbox-btn.outline:hover {
+    background-color: rgba(0,0,0,0.05);
+}
+
+/* Секция с продуктами */
+.products-section {
+    max-width: 1600px;
+    margin: 80px auto;
+    padding: 0 24px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.section-header h2 {
+    font-size: 32px;
+    margin: 0;
+}
+
+.view-all {
+    color: var(--xbox-green);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.product-card {
+    border: 1px solid #eee;
+    padding: 20px;
+    transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.product-badge {
+    background-color: var(--xbox-green);
+    color: white;
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 16px;
+}
+
+.product-card h3 {
+    font-size: 18px;
+    margin: 8px 0;
+}
+
+.product-color {
+    color: #666;
+    margin: 8px 0;
+}
+
+.product-price {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 12px 0;
+}
+
+/* Технологии */
+.tech-section {
+    background-color: var(--xbox-light);
+    padding: 80px 24px;
+    text-align: center;
+}
+
+.tech-section h2 {
+    font-size: 32px;
+    margin-bottom: 48px;
+}
+
+.tech-features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tech-card {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+}
+
+.tech-icon {
+    font-size: 40px;
+    margin-bottom: 16px;
+}
+
+.tech-card h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+/* CTA секция */
+.xbox-cta {
+    background-color: var(--xbox-blue);
+    color: white;
+    padding: 80px 24px;
+    text-align: center;
+}
+
+.xbox-cta h2 {
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.xbox-cta p {
+    font-size: 20px;
+    margin-bottom: 32px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Футер */
+.xbox-footer {
+    background-color: var(--xbox-dark);
+    color: white;
+    padding: 60px 24px 30px;
+}
+
+.footer-content {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.links-column {
+    min-width: 200px;
+}
+
+.links-column h4 {
+    font-size: 18px;
+    margin-bottom: 16px;
+    color: var(--xbox-green);
+}
+
+.links-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.links-column li {
+    margin-bottom: 12px;
+}
+
+.links-column a {
+    color: white;
+    text-decoration: none;
+}
+
+.links-column a:hover {
+    text-decoration: underline;
+}
+
+.footer-social {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 20px;
+}
+
+.footer-legal {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .hero-image {
+        width: 50%;
+        opacity: 0.7;
+    }
+}
+
+@media (max-width: 768px) {
+    .xbox-header {
+        padding: 12px 0;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .xbox-nav .nav-list {
+        display: none;
+    }
+    
+    .xbox-hero {
+        height: auto;
+        min-height: auto;
+        padding: 100px 0;
+        text-align: center;
+        flex-direction: column;
+    }
+    
+    .hero-content {
+        max-width: 100%;
+        padding: 0 20px;
+        margin-bottom: 40px;
+    }
+    
+    .hero-image {
+        position: relative;
+        width: 100%;
+        height: 300px;
+    }
+    
+    .hero-btns {
+        justify-content: center;
+    }
+    
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    
+    .tech-features {
+        flex-direction: column;
+        align-items: center;
+    }
+}
